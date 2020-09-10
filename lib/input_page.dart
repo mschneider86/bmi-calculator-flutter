@@ -19,7 +19,6 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-
   Gender selectedGender;
 
   @override
@@ -32,41 +31,41 @@ class _InputPageState extends State<InputPage> {
           children: <Widget>[
             Expanded(
                 child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selectedGender = Gender.male;
-                          });
-                        },
-                        child: ReusableCard(
-                          color: selectedGender == Gender.male ? activeCardColor : inactiveCardColor,
-                          cardChild: IconContent(
-                            label: 'MALE',
-                            icon: FontAwesomeIcons.mars,
-                          ),
-                        ),
-                      ),
+              children: <Widget>[
+                Expanded(
+                  child: ReusableCard(
+                    onPress: (){
+                      setState(() {
+                        selectedGender = Gender.male;
+                      });
+                    },
+                    color: selectedGender == Gender.male
+                        ? activeCardColor
+                        : inactiveCardColor,
+                    cardChild: IconContent(
+                      label: 'MALE',
+                      icon: FontAwesomeIcons.mars,
                     ),
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selectedGender = Gender.female;
-                          });
-                        },
-                        child: ReusableCard(
-                          color: selectedGender == Gender.female ? activeCardColor : inactiveCardColor,
-                          cardChild: IconContent(
-                            label: 'FEMALE',
-                            icon: FontAwesomeIcons.venus,
-                          ),
-                        ),
-                      ),
+                  ),
+                ),
+                Expanded(
+                  child: ReusableCard(
+                    onPress: (){
+                      setState(() {
+                        selectedGender = Gender.female;
+                      });
+                    },
+                    color: selectedGender == Gender.female
+                        ? activeCardColor
+                        : inactiveCardColor,
+                    cardChild: IconContent(
+                      label: 'FEMALE',
+                      icon: FontAwesomeIcons.venus,
                     ),
-                  ],
-                )),
+                  ),
+                ),
+              ],
+            )),
             Expanded(
               child: ReusableCard(
                 color: activeCardColor,
@@ -74,19 +73,19 @@ class _InputPageState extends State<InputPage> {
             ),
             Expanded(
                 child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: ReusableCard(
-                        color: activeCardColor,
-                      ),
-                    ),
-                    Expanded(
-                      child: ReusableCard(
-                        color: activeCardColor,
-                      ),
-                    ),
-                  ],
-                )),
+              children: <Widget>[
+                Expanded(
+                  child: ReusableCard(
+                    color: activeCardColor,
+                  ),
+                ),
+                Expanded(
+                  child: ReusableCard(
+                    color: activeCardColor,
+                  ),
+                ),
+              ],
+            )),
             Container(
               color: bottomContainerColor,
               margin: EdgeInsets.only(top: 10.0),
@@ -97,7 +96,3 @@ class _InputPageState extends State<InputPage> {
         ));
   }
 }
-
-
-
-
