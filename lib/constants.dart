@@ -5,7 +5,10 @@ const kActiveCardColor = Color(0xFF1D1E33);
 const kInactiveCardColor = Color(0xFF111328);
 const kBottomContainerColor = Color(0xFFEB1555);
 const kSliderActiveColor = Color(0xFFEB1555);
-const kSliderInactiveColor = Color(0xFFEB1555);
+const kSliderInactiveTrackColor = Color(0xFF8D8E98);
+const kSliderActiveTrackColor = Colors.white;
+const kSliderThumbColor = Color(0xFFEB1555);
+const kSliderOverlayColor = Color(0x29EB1555);
 
 const kSliderMinHeight = 100.0;
 const kSliderMaxHeight = 240.0;
